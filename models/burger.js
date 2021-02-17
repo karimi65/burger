@@ -18,9 +18,10 @@ const burger = {
         });
     },
     delete: function (id, cb) {
-        orm.delete(id, function (res) {
-            cb(res);
-        });
+        orm.delete("burgers", id, function (data) {
+            cb(data)
+
+        })
     }
 };
 

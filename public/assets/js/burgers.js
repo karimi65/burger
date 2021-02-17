@@ -36,13 +36,18 @@ $(function () {
         })
     })
 
-    $(".delete").on("click", function (event) {
-        event.preventDefault();
-        const id = $(this).attr("data.id");
-        $.ajax({
+    $(".delete").on("click", function () {
+        // event.preventDefault();
+        const id = $(this).attr("data-id");
+
+        $.ajax("/api/burger/" + id, {
             type: "DELETE",
-            url: "/api/burgers/" + id
-        }).then(location.reload());
-    });
+        }).then(
+            function () {
+                console.log('deleted burger!')
+                location.reload()
+            }
+        );
+    })
 
 });

@@ -77,15 +77,12 @@ var orm = {
         });
     },
 
-    delete: function (id, cb) {
-        var queryString =
-            "DELETE FROM burgers WHERE id = ?";
-
-        connection.query(queryString, id, (err, result) => {
+    delete: function (table, id, cb) {
+        connection.query("DELETE FROM ?? WHERE ?", [table, id], function (err, result) {
             if (err) throw err;
             cb(result);
-        }
-        );
+        })
+
     }
 
 };
