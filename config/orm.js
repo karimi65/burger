@@ -77,6 +77,17 @@ var orm = {
         });
     },
 
+    delete: function (id, cb) {
+        var queryString =
+            "DELETE FROM burgers WHERE id = ?";
+
+        connection.query(queryString, id, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        }
+        );
+    }
+
 };
 
 module.exports = orm;

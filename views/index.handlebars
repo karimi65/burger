@@ -6,7 +6,10 @@
             {{#each burger}}
             {{#if devoured}}
             <ul>
-                <li>{{this.burger_name}}</li>
+                <li>{{this.burger_name}}
+                    <button class="delete" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span>X</span></button>
+                    <hr>
+                </li>
             </ul>
 
 
