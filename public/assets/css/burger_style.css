@@ -1,0 +1,31 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/d8/8a/ca/d88acacdd20c6e4af73520058cb85aca.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: medium;
+    font-weight: normal;
+}
+
+
+
+#form {
+    place-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+} 
+
+button{
+    border-radius: 5px;
+}
+
+#eaten {
+    text-align: right;
+}
